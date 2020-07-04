@@ -1,1 +1,1 @@
-Material React Register Form
+A register form made with react and material
