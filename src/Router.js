@@ -19,9 +19,9 @@ export default function Router() {
         <Header />
         <ReactRouter>
           <Switch>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/register" component={Register}></Route>
-            <Route path="/" component={Landing}></Route>
+            <Route path={process.env.PUBLIC_URL + "/login"} component={Login}></Route>
+            <Route path={process.env.PUBLIC_URL +  "/register"} component={Register}></Route>
+            <Route path={process.env.PUBLIC_URL + "/"} component={Landing}></Route>
           </Switch>
         </ReactRouter>
         <Footer />
