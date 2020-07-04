@@ -16,37 +16,27 @@ export default class Register extends Component {
       email: "",
       name: "",
       password: "",
+      errors: {},
     };
     this.onRegisterFomSubmit = this.onRegisterFomSubmit.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
     this.styles = {
       bigBox: {
         display: "grid",
-        // alignContent: 'center',
         height: "100vh",
       },
       registerFormBox: {
         display: "grid",
-        gridGap: "20px",
         gridTemplateColumns: "1fr 1fr",
         justifyContent: "center",
-        // margin: "30px auto",
-        padding: "40px",
-        border: "1px solid #CCCCCC",
-        borderRadius: "5px",
       },
-      pictureBox: {
-        border: "1px solid #CCCCCC",
-        borderRadius: "5px",
-      },
+      pictureBox: {},
       regForm: {
         display: "grid",
         gridGap: "20px",
-        padding: "20px 30px",
+        padding: "20px 0",
         gridTemplateColumns: "repeat(auto-fit, minmax(320px, 0.6fr))",
         justifyContent: "center",
-        borderRadius: "5px",
-        // border: "1px solid #CCCCCC",
       },
       cardMedia: {
         height: "100%",
@@ -78,7 +68,10 @@ export default class Register extends Component {
         <Card style={this.styles.registerFormBox}>
           <div style={this.styles.pictureBox}>
             <CardMedia
-              image={"https://source.unsplash.com/random/800x60" +  Math.floor(Math.random()*10).toString()}
+              image={
+                "https://source.unsplash.com/random/800x60" +
+                Math.floor(Math.random() * 10).toString()
+              }
               title="Live from space album cover"
               style={this.styles.cardMedia}
             />
