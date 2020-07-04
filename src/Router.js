@@ -3,7 +3,6 @@ import {
   BrowserRouter as ReactRouter,
   Switch,
   Route,
-  Link,
   HashRouter,
 } from "react-router-dom";
 import Header from "./components/Layout/Header";
