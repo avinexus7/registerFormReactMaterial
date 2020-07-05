@@ -84,6 +84,7 @@ class Register extends Component {
           <CardContent style={this.styles.content}>
             <Typography align="center" component="h5" variant="h5">
               Join our Community
+              {/* {this.props.auth.user ? this.props.auth.user.name : null} */}
             </Typography>
             <form
               onSubmit={this.onRegisterFomSubmit}
@@ -130,7 +131,7 @@ class Register extends Component {
 
 /* register the reducer */
 const mapStateToProps = (state) => ({
-  // auth: state.auth,
+  auth: state.auth,
 });
 
 export default connect(mapStateToProps, {
