@@ -8,7 +8,11 @@ import {
   CardMedia,
 } from "@material-ui/core";
 
-export default class Register extends Component {
+/* redux */
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
+
+class Register extends Component {
   constructor() {
     super();
     this.state = {
@@ -57,6 +61,7 @@ export default class Register extends Component {
       password: this.state.password,
     };
     console.log(newUser);
+    this.props.registerUser(newUser);
   }
   handleOnChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -122,3 +127,12 @@ export default class Register extends Component {
     );
   }
 }
+
+/* register the reducer */
+const mapStateToProps = (state) => ({
+  // auth: state.auth,
+});
+
+export default connect(mapStateToProps, {
+  /* register the action */ registerUser,
+})(Register);
