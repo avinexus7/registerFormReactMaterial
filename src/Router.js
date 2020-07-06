@@ -8,6 +8,7 @@ import {
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import Landing from "./components/Layout/Landing";
+import NotFound from "./components/Layout/NotFound";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 
@@ -18,9 +19,10 @@ export default function Router() {
         <Header />
         <ReactRouter>
           <Switch>
-            <Route path={process.env.PUBLIC_URL + "/login"} component={Login}></Route>
-            <Route path={process.env.PUBLIC_URL +  "/register"} component={Landing}></Route>
-            <Route path={process.env.PUBLIC_URL + "/"} component={Register}></Route>
+            <Route path={"/login"} component={Login}></Route>
+            <Route path={"/register"} component={Landing}></Route>
+            <Route path={"/"} component={Register}></Route>
+            <Route path={"*"} component={NotFound}></Route>
           </Switch>
         </ReactRouter>
         <Footer />
