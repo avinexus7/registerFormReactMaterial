@@ -11,6 +11,9 @@ import {
 /* redux */
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
+import PropTypes from "prop-types";
+
+import { withRouter } from "react-router-dom";
 
 class Register extends Component {
   constructor() {
@@ -52,6 +55,12 @@ class Register extends Component {
       },
     };
   }
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.errors !== prevState.errors) {
+      return ({ errors: nextProps.errors })
+    }
+    return null
+  }
   onRegisterFomSubmit(e) {
     e.preventDefault();
     const newUser = {
@@ -60,8 +69,8 @@ class Register extends Component {
       username: this.state.username,
       password: this.state.password,
     };
-    console.log(newUser);
-    this.props.registerUser(newUser);
+    // console.log(newUser);
+    this.props.registerUser(newUser, this.props.history);
   }
   handleOnChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -74,7 +83,7 @@ class Register extends Component {
           <div style={this.styles.pictureBox}>
             <CardMedia
               image={
-                "https://source.unsplash.com/random/800x60" +
+                "https://source.unsplash.com/random/800x600" +
                 Math.floor(Math.random() * 10).toString()
               }
               title="Live from space album cover"
@@ -121,6 +130,9 @@ class Register extends Component {
               <Button variant="contained" type="submit" color="primary">
                 Register
               </Button>
+              {Object.keys(this.state.errors).length
+                ? JSON.stringify(this.state.errors)
+                : null}{this.props.auth.user ? JSON.stringify(this.props.auth.user) : ''}
             </form>
           </CardContent>
         </Card>
@@ -129,11 +141,18 @@ class Register extends Component {
   }
 }
 
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+};
+
 /* register the reducer */
 const mapStateToProps = (state) => ({
   auth: state.auth,
+  errors: state.errors,
 });
 
 export default connect(mapStateToProps, {
   /* register the action */ registerUser,
-})(Register);
+})(withRouter(Register));

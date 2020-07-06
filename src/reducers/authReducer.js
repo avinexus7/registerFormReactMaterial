@@ -1,4 +1,5 @@
-import { TEST_DISPATCH } from "../actions/dispatchTypes";
+import { SET_AUTH_USER } from "../actions/dispatchTypes";
+
 
 const initialState = {
   isAuthenticated: false,
@@ -6,12 +7,12 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+  // console.log('@@@@@@@', action)
   switch (action.type) {
-    case TEST_DISPATCH:
+    case SET_AUTH_USER:
       return {
-        ...state,
-        user: action.payload,
-      };
+        ...state, user: action.payload
+      }
     default:
       return state;
   }
