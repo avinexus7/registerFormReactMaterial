@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/registerFormReactMaterial/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/registerFormReactMaterial/static/js/main.7bed2d54.chunk.js",
-    "main.js.map": "/registerFormReactMaterial/static/js/main.7bed2d54.chunk.js.map",
+    "main.js": "/registerFormReactMaterial/static/js/main.81e17c44.chunk.js",
+    "main.js.map": "/registerFormReactMaterial/static/js/main.81e17c44.chunk.js.map",
     "runtime-main.js": "/registerFormReactMaterial/static/js/runtime-main.5bafc547.js",
     "runtime-main.js.map": "/registerFormReactMaterial/static/js/runtime-main.5bafc547.js.map",
-    "static/js/2.d84a0678.chunk.js": "/registerFormReactMaterial/static/js/2.d84a0678.chunk.js",
-    "static/js/2.d84a0678.chunk.js.map": "/registerFormReactMaterial/static/js/2.d84a0678.chunk.js.map",
+    "static/js/2.9d9836d0.chunk.js": "/registerFormReactMaterial/static/js/2.9d9836d0.chunk.js",
+    "static/js/2.9d9836d0.chunk.js.map": "/registerFormReactMaterial/static/js/2.9d9836d0.chunk.js.map",
     "index.html": "/registerFormReactMaterial/index.html",
-    "precache-manifest.fd19dd8081ebc19c33fbafa6f43210e1.js": "/registerFormReactMaterial/precache-manifest.fd19dd8081ebc19c33fbafa6f43210e1.js",
+    "precache-manifest.a84c1727e1fc10fbe9b253cc6eccd4de.js": "/registerFormReactMaterial/precache-manifest.a84c1727e1fc10fbe9b253cc6eccd4de.js",
     "service-worker.js": "/registerFormReactMaterial/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/registerFormReactMaterial/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.d84a0678.chunk.js.LICENSE.txt": "/registerFormReactMaterial/static/js/2.d84a0678.chunk.js.LICENSE.txt"
+    "static/js/2.9d9836d0.chunk.js.LICENSE.txt": "/registerFormReactMaterial/static/js/2.9d9836d0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5bafc547.js",
-    "static/js/2.d84a0678.chunk.js",
+    "static/js/2.9d9836d0.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.7bed2d54.chunk.js"
+    "static/js/main.81e17c44.chunk.js"
   ]
 }
