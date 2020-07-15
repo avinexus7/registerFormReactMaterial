@@ -57,9 +57,12 @@ class Register extends Component {
   }
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.errors !== prevState.errors) {
-      return ({ errors: nextProps.errors })
+      return { errors: nextProps.errors };
     }
-    return null
+    if (Object.keys(nextProps.auth.user).length) {
+      return { user: nextProps.auth.user };
+    }
+    return null;
   }
   onRegisterFomSubmit(e) {
     e.preventDefault();
@@ -132,7 +135,8 @@ class Register extends Component {
               </Button>
               {Object.keys(this.state.errors).length
                 ? JSON.stringify(this.state.errors)
-                : null}{this.props.auth.user ? JSON.stringify(this.props.auth.user) : ''}
+                : null}
+              {this.state.user ? JSON.stringify(this.state.user) : ""}
             </form>
           </CardContent>
         </Card>
